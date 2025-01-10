@@ -7,23 +7,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        'discord-primary': '#313338',
-        'discord-secondary': '#2b2d31',
-        'discord-tertiary': '#1e1f22',
         'discord-accent': '#5865f2'
       },
     }
+  },
+  daisyui: {
+    themes: [
+      "coffee"
+    ]
   },
   plugins: [
     require("daisyui"),
     function ({addUtilities}) {
       const newUtilities = {
-        ".scrollbar-thin" : {
-          scrollbarWidth : "thin",
-          scrollbarColor : "rgb(30, 31, 34) transparent",
-          scrollbarGutter: "stable both-edges"
-        }
-      }
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin", // For Firefox
+          scrollbarColor: "rgb(30, 31, 34) transparent",
+          "&::-webkit-scrollbar": {
+            width: "8px", // Scrollbar width
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+            padding: "2px", // Adjust the padding around the scrollbar
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "rgb(30, 31, 34)",
+            borderRadius: "9999px", // Round edges
+            border: "2px solid transparent", // Optional border
+          },
+        },
+      };
       addUtilities(newUtilities, ["responsive", "hover"])
     }
   ],
