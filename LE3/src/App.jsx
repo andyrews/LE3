@@ -180,115 +180,280 @@ function App() {
       </div>
 
       <div className="flex flex-col w-full bg-primary">
+        {/*Channel Messages*/}
+        {/*Top Sticky*/}
         <div className="p-3 flex justify-between items-center sticky top-0 bg-secondary shadow:md border-b-2">
           <div className="flex gap-2 items-center">
-          <svg class="h-6 w-6"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="4" y1="9" x2="20" y2="9" />  <line x1="4" y1="15" x2="20" y2="15" />  <line x1="10" y1="3" x2="8" y2="21" />  <line x1="16" y1="3" x2="14" y2="21" /></svg>
-          <h1>TITE</h1>
+            <svg
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              {" "}
+              <line x1="4" y1="9" x2="20" y2="9" />{" "}
+              <line x1="4" y1="15" x2="20" y2="15" />{" "}
+              <line x1="10" y1="3" x2="8" y2="21" />{" "}
+              <line x1="16" y1="3" x2="14" y2="21" />
+            </svg>
+            <h1 className="font-extrabold">TITE</h1>
           </div>
           <div className="flex gap-2 items-center">
-            <svg
-              class="h-6 w-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <div className="tooltip tooltip-bottom" data-tip="Threads">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <circle cx="12" cy="12" r="1" /> <circle cx="12" cy="5" r="1" />{" "}
+                <circle cx="12" cy="19" r="1" />
+              </svg>
+            </div>
+            <div
+              className="tooltip tooltip-bottom"
+              data-tip="Notification Settings"
             >
-              {" "}
-              <circle cx="12" cy="12" r="1" /> <circle cx="12" cy="5" r="1" />{" "}
-              <circle cx="12" cy="19" r="1" />
-            </svg>
-            <svg
-              class="h-6 w-6"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              {" "}
-              <path stroke="none" d="M0 0h24v24H0z" />{" "}
-              <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />{" "}
-              <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-            </svg>
-            <svg
-              class="h-6 w-6"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              {" "}
-              <path stroke="none" d="M0 0h24v24H0z" />{" "}
-              <circle cx="12" cy="11" r="3" />{" "}
-              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
-            </svg>
-            <svg
-              class="h-6 w-6"
-              width="24"
-              height="24"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-              />
-            </svg>
-            <input type="text" placeholder="Search" className="p-1 font-xs bg-accent rounded-md"></input>
-            <svg
-              class="h-6 w-6"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              {" "}
-              <path stroke="none" d="M0 0h24v24H0z" />{" "}
-              <rect x="4" y="4" width="16" height="16" rx="2" />{" "}
-              <path d="M4 13h3l3 3h4l3 -3h3" />
-            </svg>
-            <svg
-              class="h-6 w-6"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              {" "}
-              <path stroke="none" d="M0 0h24v24H0z" />{" "}
-              <circle cx="12" cy="12" r="9" />{" "}
-              <line x1="12" y1="17" x2="12" y2="17.01" />{" "}
-              <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
-            </svg>
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />{" "}
+                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+              </svg>
+            </div>
+            <div className="tooltip tooltip-bottom" data-tip="Pinned Messages">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <circle cx="12" cy="11" r="3" />{" "}
+                <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
+              </svg>
+            </div>
+            <div className="tooltip tooltip-bottom" data-tip="Member List">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                />
+              </svg>
+            </div>
+            <div className="flex p-1 items-center font-xs bg-accent rounded-md">
+              <input
+                type="text"
+                placeholder="Search"
+                className="bg-transparent focus:outline-none"
+              ></input>
+              <svg
+                class="h-5 w-5"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <circle cx="10" cy="10" r="7" />{" "}
+                <line x1="21" y1="21" x2="15" y2="15" />
+              </svg>
+            </div>
+            <div className="tooltip tooltip-bottom" data-tip="Inbox">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <rect x="4" y="4" width="16" height="16" rx="2" />{" "}
+                <path d="M4 13h3l3 3h4l3 -3h3" />
+              </svg>
+            </div>
+            <div className="tooltip tooltip-bottom" data-tip="Help">
+              <svg
+                class="h-6 w-6 cursor-pointer"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <circle cx="12" cy="12" r="9" />{" "}
+                <line x1="12" y1="17" x2="12" y2="17.01" />{" "}
+                <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+              </svg>
+            </div>
           </div>
         </div>
-        {/*Channel Messages*/}
-        <div className="flex h-full w-full">
-          <div className="w-full h-full"></div>
-          <div className="divider divider-neutral divider-horizontal "></div>
+        <div className="flex h-full w-full max-h-screen">
+          <div className="w-full h-full flex flex-col">
+            <div className="overflow-auto w-full h-full">
+              <div className="p-3 text-base-100">
+                
+              </div>
+            </div>
+            {/*Bottom Sticky*/}
+            <div className="bg-primary p-3  gap-3 w-full flex sticky bottom-0 justify-center">
+              <div className="flex items-center gap-2 bg-accent p-2 rounded-md w-full">
+                <svg
+                  class="h- w-9 cursor-pointer"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                  <circle cx="12" cy="12" r="9" />{" "}
+                  <line x1="9" y1="12" x2="15" y2="12" />{" "}
+                  <line x1="12" y1="9" x2="12" y2="15" />
+                </svg>
+                <input
+                  placeholder="Message"
+                  className="bg-transparent focus:outline-none border-none rounded-md w-full"
+                ></input>
+                <svg
+                  class="h-10 w-10 cursor-pointer"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                  <rect x="3" y="8" width="18" height="4" rx="1" />{" "}
+                  <line x1="12" y1="8" x2="12" y2="21" />{" "}
+                  <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />{" "}
+                  <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
+                </svg>
+                <svg
+                  class="h-10 w-10 cursor-pointer"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12.75 8.25v7.5m6-7.5h-3V12m0 0v3.75m0-3.75H18M9.75 9.348c-1.03-1.464-2.698-1.464-3.728 0-1.03 1.465-1.03 3.84 0 5.304 1.03 1.464 2.699 1.464 3.728 0V12h-1.5M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
+                  />
+                </svg>
+                <svg
+                  class="h-10 w-10 cursor-pointer"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  {" "}
+                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                  <path d="M20 12l-2 .5a6 6 0 0 1 -6.5 -6.5l.5 -2l8 8" />{" "}
+                  <path d="M20 12a8 8 0 1 1 -8 -8" />
+                </svg>
+                <svg
+                  class="h-10 w-10 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div className="p-4 bg-accent rounded-md ">
+                <svg
+                  class="h-10 w-10 cursor-pointer"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className="divider m-0 p-0 divider-neutral divider-horizontal "></div>
           {/*Active Now (if main page) or Active Members (if in server)*/}
-          <div className="w-60 h-full"></div>
+          <div className="w-60 h-full">
+            <button>andyrews</button>
+          </div>
         </div>
       </div>
     </div>
