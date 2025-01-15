@@ -85,11 +85,25 @@ function App() {
 
       {/*Server Channels*/}
       <div className="w-72 h-full bg-accent">
-        <div className="navbar h-14 min-h-0 bg-base-100">
+        <div className="navbar h-12 min-h-0 px-4 bg-base-100">
           <div className="flex-1 font-extrabold">
           toothbrush/ice pick
           </div>
+          <div className="flex-none">
+            <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+            </svg>
+          </div>
         </div>
+
+        <ul className="menu bg-base-200">
+          <li>
+            <a href="">
+              General
+            </a>
+          </li>
+        </ul>
+
       </div>
 
       <div className="flex w-full bg-primary">
