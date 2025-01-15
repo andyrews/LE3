@@ -1,10 +1,11 @@
 import { useState } from "react";
 import ServerPic from "./components/ServerPic";
 import "./App.css";
+import accIcon from "./assets/img/acc-icon.png";
 
 function App() {
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex w-screen h-screen overflow-hidden">
       {/*Navbar Servers*/}
       <div className="min-w-[70px] h-full bg-base-200">
         <div className="flex h-full flex-col">
@@ -84,7 +85,7 @@ function App() {
       </div>
 
       {/*Server Channels*/}
-      <div className="w-72 h-full bg-neutral">
+      <div className="w-72 h-full flex flex-col bg-neutral">
         <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
           <div className="flex-1 font-extrabold">
           toothbrush/ice pick
@@ -96,7 +97,7 @@ function App() {
           </div>
         </div>
 
-        <div className="h-auto">
+        <div className="h-auto grow bg-base-100">
           <ul className="menu bg-base-100 font-medium
           [&_li>a]:py-1
           ">
@@ -138,7 +139,43 @@ function App() {
             </li>
           </ul>
         </div>
-        
+        <div className="flex w-full p-2 bg-base-100">
+          <div className="btn btn-ghost p-1 items-center grow justify-start">
+            <div className="avatar indicator">
+              <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                  <div className="w-8 h-8 rounded-full">
+                    <img src={accIcon} />
+                  </div>
+            </div>
+            <div className="flex flex-col text-left gap-0.5">
+              <div>
+                Idol
+              </div>
+              <div className="">
+                hello
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex flex-row items-center gap-0.5
+          [&_button]:btn 
+          [&_button]:btn-ghost
+          [&_button]:px-1.5
+          [&_button]:w-8
+          [&_button]:h-8
+          [&_button]:min-h-0">
+            <button className="">
+              <svg class="h-8 w-8  "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="9" y="2" width="6" height="11" rx="3" />  <path d="M5 10a7 7 0 0 0 14 0" />  <line x1="8" y1="21" x2="16" y2="21" />  <line x1="12" y1="17" x2="12" y2="21" /></svg>
+            </button>
+            <button className="btn btn-ghost">
+              <svg class="h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="13" rx="2" width="5" height="7" />  <rect x="15" y="13" rx="2" width="5" height="7" />  <path d="M4 15v-3a8 8 0 0 1 16 0v3" /></svg>
+            </button>
+            <button className="btn btn-ghost">
+              <svg class="h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />  <circle cx="12" cy="12" r="3" /></svg>
+            </button>
+          </div>
+          
+        </div>
 
       </div>
 
