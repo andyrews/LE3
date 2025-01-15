@@ -442,49 +442,104 @@ function App() {
           <div className="divider m-0 p-0 divider-neutral divider-horizontal "></div>
           {/*Active Now (if main page) or Active Members (if in server)*/}
           <div className="w-72 h-full bg-neutral">
-            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
+            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">{/*Online Div*/}
               <div className="flex-1 flex font-bold text-xs">
               ONLINE — 8
               </div>
-              
             </div>
             <div className="h-auto">
                 <ul className="menu bg-base-100 font-medium w-57">
                   
-                  <li><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                <li><a>
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
                   <li><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
                   <li><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
                   <li><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
                 </ul>
@@ -494,45 +549,100 @@ function App() {
               <div className="flex-1 flex font-bold text-xs">
               OFFLINE — 8
               </div>
-              
             </div>
             <div className="h-auto">
                 <ul className="menu bg-base-100 font-medium w-57">
                   
-                  <li className="opacity-50 hover:opacity-100"><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
-                  <li className="opacity-50 hover:opacity-100"><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
-                  <li className="opacity-50 hover:opacity-100"><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
-                  <li className="opacity-50 hover:opacity-100"><a>
-                    <div className="avatar">
-                      <div className="w-8 rounded-full">
-                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                    <div className="flex items-center gap-2">
+                      <div className="avatar indicator">
+                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <div className="w-8 rounded-full">
+                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                        </div>
                       </div>
-                    </div>
-                    Andy Rews
+
+                        <div className="flex flex-col">{/*div for the status and profile name*/}
+                          <div className="flex items-center">{/*div for profile name*/}
+                           <span className="font-semibold text-sm">
+                             Andy Rews
+                           </span>
+                          </div>
+                            <span className="text-xs text-neutral-400">{/*status*/}
+                             Playing chess
+                            </span>
+                        </div>
+
+                     </div>
                   </a></li>
 
                 </ul>
