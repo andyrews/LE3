@@ -9,6 +9,11 @@ export default {
       colors: {
         'discord-accent': '#5865f2'
       },
+      fontFamily: {
+        sans: [
+          
+        ]
+      },
     }
   },
   daisyui: {

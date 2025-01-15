@@ -84,7 +84,13 @@ function App() {
       </div>
 
       {/*Server Channels*/}
-      <div className="w-64 h-full bg-accent"></div>
+      <div className="w-72 h-full bg-accent">
+        <div className="navbar h-14 min-h-0 bg-base-100">
+          <div className="flex-1">
+            BITCH
+          </div>
+        </div>
+      </div>
 
       <div className="flex w-full bg-primary">
         {/*Channel Messages*/}

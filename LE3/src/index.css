@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .tooltip-right::before{
-
-
-    @apply left-auto;
-
+    /* @apply left-auto; */
+    /* @apply right-auto;
+    @apply fixed; */
 }
