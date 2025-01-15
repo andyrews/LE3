@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.tooltip-right::before{
+
+
+    @apply left-auto;
+
+}
