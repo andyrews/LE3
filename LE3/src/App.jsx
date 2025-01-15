@@ -3,6 +3,7 @@ import ServerPic from "./components/ServerPic";
 import "./App.css";
 import accIcon from "./assets/img/acc-icon.png";
 import { ChannelDropdown, ChannelList, Channel } from "./components/Channel";
+import Message from "./components/Message";
 
 function App() {
   return (
@@ -80,7 +81,6 @@ function App() {
                 <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
               </svg>
             </ServerPic>
-            
           </div>
         </div>
       </div>
@@ -88,12 +88,24 @@ function App() {
       {/*Server Channels*/}
       <div className="w-72 h-full flex flex-col bg-neutral">
         <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
-          <div className="flex-1 font-extrabold">
-          toothbrush/ice pick
-          </div>
+          <div className="flex-1 font-extrabold">toothbrush/ice pick</div>
           <div className="flex-none">
-            <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+            <svg
+              class="w-4 h-4 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 9-7 7-7-7"
+              />
             </svg>
           </div>
         </div>
@@ -128,45 +140,88 @@ function App() {
           </ChannelDropdown>
         </ChannelList>
 
-        
         <div className="flex w-full p-2 bg-base-100">
           <div className="btn btn-ghost p-1 items-center grow justify-start">
             <div className="avatar indicator">
               <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
-                  <div className="w-8 h-8 rounded-full">
-                    <img src={accIcon} />
-                  </div>
+              <div className="w-8 h-8 rounded-full">
+                <img src={accIcon} />
+              </div>
             </div>
             <div className="flex flex-col text-left gap-0.5">
-              <div>
-                Idol
-              </div>
-              <div className="">
-                hello
-              </div>
+              <div>Idol</div>
+              <div className="">hello</div>
             </div>
           </div>
-          
-          <div className="flex flex-row items-center gap-0.5
+
+          <div
+            className="flex flex-row items-center gap-0.5
           [&_button]:btn 
           [&_button]:btn-ghost
           [&_button]:px-1.5
           [&_button]:w-8
           [&_button]:h-8
-          [&_button]:min-h-0">
+          [&_button]:min-h-0"
+          >
             <button className="">
-              <svg class="h-8 w-8  "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="9" y="2" width="6" height="11" rx="3" />  <path d="M5 10a7 7 0 0 0 14 0" />  <line x1="8" y1="21" x2="16" y2="21" />  <line x1="12" y1="17" x2="12" y2="21" /></svg>
+              <svg
+                class="h-8 w-8  "
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <rect x="9" y="2" width="6" height="11" rx="3" />{" "}
+                <path d="M5 10a7 7 0 0 0 14 0" />{" "}
+                <line x1="8" y1="21" x2="16" y2="21" />{" "}
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
             </button>
             <button className="btn btn-ghost">
-              <svg class="h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <rect x="4" y="13" rx="2" width="5" height="7" />  <rect x="15" y="13" rx="2" width="5" height="7" />  <path d="M4 15v-3a8 8 0 0 1 16 0v3" /></svg>
+              <svg
+                class="h-8 w-8"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <rect x="4" y="13" rx="2" width="5" height="7" />{" "}
+                <rect x="15" y="13" rx="2" width="5" height="7" />{" "}
+                <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+              </svg>
             </button>
             <button className="btn btn-ghost">
-              <svg class="h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />  <circle cx="12" cy="12" r="3" /></svg>
+              <svg
+                class="h-8 w-8"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                {" "}
+                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />{" "}
+                <circle cx="12" cy="12" r="3" />
+              </svg>
             </button>
           </div>
-          
         </div>
-
       </div>
 
       <div className="flex flex-col w-full bg-primary">
@@ -326,11 +381,87 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="flex h-full w-full max-h-screen">
-          <div className="w-full h-full flex flex-col">
+        <div className="flex h-full w-full">
+          <div className="w-full h-full flex gap-16 flex-col">
             <div className="overflow-auto w-full h-full">
-              <div className="p-3 text-base-100">
-                
+              <div className="flex flex-col p-3 w-full h-full">
+                {/*Start Text*/}
+                <div className="text-base-100 flex flex-col text-center">
+                  <h1 className="text-[2rem] font-extrabold">
+                    Welcome to
+                    <br />
+                    toothbrush/ice pick
+                  </h1>
+                  <h3 className="text-sm">
+                    This is the beginning of the server
+                  </h3>
+                </div>
+                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                  September 23, 2022
+                </div>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer"src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer"src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img  className="cursor-pointer"src={accIcon} />
+                </Message>
+                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                  December 3, 2022
+                </div>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img  className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                  January 10, 2023
+                </div>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
+                <Message name={"neronero"} message={"Patite"}>
+                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </Message>
+                <Message name={"rayray"} message={"Nigger"}>
+                  <img className="cursor-pointer" src={accIcon} />
+                </Message>
               </div>
             </div>
             {/*Bottom Sticky*/}
@@ -376,22 +507,22 @@ function App() {
                   <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
                 </svg>
                 <svg
-                  class="h-10 w-10 cursor-pointer"
-                  width="24"
-                  height="24"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
+                  stroke-width="1.5"
                   stroke="currentColor"
-                  className="size-6"
+                  class="h-10 w-10 cursor-pointer"
+                  width="24"
+                  height="24"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M12.75 8.25v7.5m6-7.5h-3V12m0 0v3.75m0-3.75H18M9.75 9.348c-1.03-1.464-2.698-1.464-3.728 0-1.03 1.465-1.03 3.84 0 5.304 1.03 1.464 2.699 1.464 3.728 0V12h-1.5M4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
                   />
                 </svg>
+
                 <svg
                   class="h-10 w-10 cursor-pointer"
                   width="24"
@@ -422,9 +553,9 @@ function App() {
                   />
                 </svg>
               </div>
-              <div className="p-4 bg-accent rounded-md ">
+              <div className="flex items-center p-2 bg-accent rounded-md ">
                 <svg
-                  class="h-10 w-10 cursor-pointer"
+                  class="h-8 w-8 cursor-pointer"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -442,210 +573,247 @@ function App() {
           <div className="divider m-0 p-0 divider-neutral divider-horizontal "></div>
           {/*Active Now (if main page) or Active Members (if in server)*/}
           <div className="w-72 h-full bg-neutral">
-            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">{/*Online Div*/}
-              <div className="flex-1 flex font-bold text-xs">
-              ONLINE — 8
-              </div>
+            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
+              {/*Online Div*/}
+              <div className="flex-1 flex font-bold text-xs">ONLINE — 8</div>
             </div>
             <div className="h-auto">
-                <ul className="menu bg-base-100 font-medium w-57">
-                  
-                <li><a>
+              <ul className="menu bg-base-100 font-medium w-57">
+                <li>
+                  <a>
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li><a>
+                <li>
+                  <a>
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li><a>
+                <li>
+                  <a>
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li><a>
+                <li>
+                  <a>
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
-
-                     </div>
-                  </a></li>
-
-                </ul>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
-              <div className="flex-1 flex font-bold text-xs">
-              OFFLINE — 8
-              </div>
+              <div className="flex-1 flex font-bold text-xs">OFFLINE — 8</div>
             </div>
             <div className="h-auto">
-                <ul className="menu bg-base-100 font-medium w-57">
-                  
-                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+              <ul className="menu bg-base-100 font-medium w-57">
+                <li className="opacity-50 hover:opacity-100">
+                  <a>
+                    {/*fadeout when offline and becomes clear when hovers over the profile*/}
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                <li className="opacity-50 hover:opacity-100">
+                  <a>
+                    {/*fadeout when offline and becomes clear when hovers over the profile*/}
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                <li className="opacity-50 hover:opacity-100">
+                  <a>
+                    {/*fadeout when offline and becomes clear when hovers over the profile*/}
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
 
-                     </div>
-                  </a></li>
-
-                  <li className="opacity-50 hover:opacity-100"><a>{/*fadeout when offline and becomes clear when hovers over the profile*/}
+                <li className="opacity-50 hover:opacity-100">
+                  <a>
+                    {/*fadeout when offline and becomes clear when hovers over the profile*/}
                     <div className="flex items-center gap-2">
                       <div className="avatar indicator">
-                      <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>{/*indicator of statuses*/}
+                        <span class="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs badge-primary"></span>
+                        {/*indicator of statuses*/}
                         <div className="w-8 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                         </div>
                       </div>
 
-                        <div className="flex flex-col">{/*div for the status and profile name*/}
-                          <div className="flex items-center">{/*div for profile name*/}
-                           <span className="font-semibold text-sm">
-                             Andy Rews
-                           </span>
-                          </div>
-                            <span className="text-xs text-neutral-400">{/*status*/}
-                             Playing chess
-                            </span>
+                      <div className="flex flex-col">
+                        {/*div for the status and profile name*/}
+                        <div className="flex items-center">
+                          {/*div for profile name*/}
+                          <span className="font-semibold text-sm">
+                            Andy Rews
+                          </span>
                         </div>
-
-                     </div>
-                  </a></li>
-
-                </ul>
+                        <span className="text-xs text-neutral-400">
+                          {/*status*/}
+                          Playing chess
+                        </span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
