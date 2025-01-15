@@ -451,8 +451,102 @@ function App() {
           </div>
           <div className="divider m-0 p-0 divider-neutral divider-horizontal "></div>
           {/*Active Now (if main page) or Active Members (if in server)*/}
-          <div className="w-60 h-full">
-            <button>andyrews</button>
+          <div className="w-72 h-full bg-neutral">
+            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
+              <div className="flex-1 flex font-bold text-xs">
+              ONLINE — 8
+              </div>
+              
+            </div>
+            <div className="h-auto">
+                <ul className="menu bg-base-100 font-medium w-57">
+                  
+                  <li><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                </ul>
+            </div>
+
+            <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
+              <div className="flex-1 flex font-bold text-xs">
+              OFFLINE — 8
+              </div>
+              
+            </div>
+            <div className="h-auto">
+                <ul className="menu bg-base-100 font-medium w-57">
+                  
+                  <li className="opacity-50 hover:opacity-100"><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li className="opacity-50 hover:opacity-100"><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li className="opacity-50 hover:opacity-100"><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                  <li className="opacity-50 hover:opacity-100"><a>
+                    <div className="avatar">
+                      <div className="w-8 rounded-full">
+                        <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      </div>
+                    </div>
+                    Andy Rews
+                  </a></li>
+
+                </ul>
+            </div>
           </div>
         </div>
       </div>
