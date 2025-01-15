@@ -86,8 +86,8 @@ function App() {
       {/*Server Channels*/}
       <div className="w-72 h-full bg-accent">
         <div className="navbar h-14 min-h-0 bg-base-100">
-          <div className="flex-1">
-            BITCH
+          <div className="flex-1 font-extrabold">
+          toothbrush/ice pick
           </div>
         </div>
       </div>
