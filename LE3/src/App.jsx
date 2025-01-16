@@ -89,7 +89,7 @@ function App() {
       <div className="w-72 h-full flex flex-col bg-neutral">
         <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
           <div className="flex-1 font-extrabold">toothbrush/ice pick</div>
-          <div className="flex-none">
+          <div className="flex-none cursor-pointer">
             <svg
               class="w-4 h-4 text-gray-800 dark:text-white"
               aria-hidden="true"
@@ -227,7 +227,7 @@ function App() {
       <div className="flex flex-col w-full bg-primary">
         {/*Channel Messages*/}
         {/*Top Sticky*/}
-        <div className="p-3 flex justify-between items-center sticky top-0 bg-secondary shadow:md border-b-2">
+        <div className="p-3 flex justify-between items-center sticky top-0 bg-secondary shadow-md border-b-2 border-base-200">
           <div className="flex gap-2 items-center">
             <svg
               class="h-6 w-6"
@@ -247,7 +247,10 @@ function App() {
             <h1 className="font-extrabold">TITE</h1>
           </div>
           <div className="flex gap-2 items-center">
-            <div className="tooltip tooltip-bottom" data-tip="Threads">
+            <div
+              className="tooltip font-extrabold tooltip-bottom"
+              data-tip="Threads"
+            >
               <svg
                 class="h-6 w-6 cursor-pointer"
                 viewBox="0 0 24 24"
@@ -258,12 +261,12 @@ function App() {
                 stroke-linejoin="round"
               >
                 {" "}
-                <circle cx="12" cy="12" r="1" /> <circle cx="12" cy="5" r="1" />{" "}
-                <circle cx="12" cy="19" r="1" />
+                <circle cx="12" cy="12" r="10" />{" "}
+                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
               </svg>
             </div>
             <div
-              className="tooltip tooltip-bottom"
+              className="tooltip font-extrabold tooltip-bottom"
               data-tip="Notification Settings"
             >
               <svg
@@ -283,7 +286,10 @@ function App() {
                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
               </svg>
             </div>
-            <div className="tooltip tooltip-bottom" data-tip="Pinned Messages">
+            <div
+              className="tooltip font-extrabold tooltip-bottom"
+              data-tip="Pinned Messages"
+            >
               <svg
                 class="h-6 w-6 cursor-pointer"
                 width="24"
@@ -301,7 +307,10 @@ function App() {
                 <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
               </svg>
             </div>
-            <div className="tooltip tooltip-bottom" data-tip="Member List">
+            <div
+              className="tooltip font-extrabold tooltip-bottom"
+              data-tip="Member List"
+            >
               <svg
                 class="h-6 w-6 cursor-pointer"
                 width="24"
@@ -310,7 +319,6 @@ function App() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-
               >
                 <path
                   strokeLinecap="round"
@@ -319,7 +327,7 @@ function App() {
                 />
               </svg>
             </div>
-            <div className="flex p-1 items-center font-xs bg-accent rounded-md">
+            <div className="flex px-3 py-1 items-center font-xs bg-accent rounded-md">
               <input
                 type="text"
                 placeholder="Search"
@@ -342,7 +350,10 @@ function App() {
                 <line x1="21" y1="21" x2="15" y2="15" />
               </svg>
             </div>
-            <div className="tooltip tooltip-bottom" data-tip="Inbox">
+            <div
+              className="tooltip font-extrabold tooltip-bottom"
+              data-tip="Inbox"
+            >
               <svg
                 class="h-6 w-6 cursor-pointer"
                 width="24"
@@ -360,7 +371,10 @@ function App() {
                 <path d="M4 13h3l3 3h4l3 -3h3" />
               </svg>
             </div>
-            <div className="tooltip tooltip-bottom" data-tip="Help">
+            <div
+              className="tooltip font-extrabold tooltip-bottom"
+              data-tip="Help"
+            >
               <svg
                 class="h-6 w-6 cursor-pointer"
                 width="24"
@@ -384,7 +398,7 @@ function App() {
         <div className="flex h-full w-full">
           <div className="w-full h-full flex gap-16 flex-col">
             <div className="overflow-auto w-full h-full">
-              <div className="flex flex-col p-3 w-full h-full">
+              <div className="flex flex-col py-3 w-full h-full">
                 {/*Start Text*/}
                 <div className="text-base-100 flex flex-col text-center">
                   <h1 className="text-[2rem] font-extrabold">
@@ -396,38 +410,67 @@ function App() {
                     This is the beginning of the server
                   </h3>
                 </div>
-                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                <div className="px-3 divider text-secondary divider-secondary text-xs font-semibold">
                   September 23, 2022
                 </div>
-                <Message name={"neronero"} message={<h1>test1<br/>si<br/>Rayray</h1>}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                <Message
+                  name={"neronero"}
+                  message={
+                    <h1>
+                      test1
+                      <br />
+                      si
+                      <br />
+                      Rayray
+                    </h1>
+                  }
+                >
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
-                <Message name={"rayray"} message={<img className="cursor-pointer" src={accIcon} />}>
+                <Message
+                  name={"rayray"}
+                  message={<img className="cursor-pointer" src={accIcon} />}
+                >
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
-                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                <div className="px-3 divider text-secondary divider-secondary text-xs font-semibold">
                   December 3, 2022
                 </div>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
@@ -436,19 +479,25 @@ function App() {
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
-                <div className="divider text-secondary divider-secondary text-xs font-semibold">
+                <div className="px-3 divider text-secondary divider-secondary text-xs font-semibold">
                   January 10, 2023
                 </div>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
@@ -457,7 +506,10 @@ function App() {
                   <img className="cursor-pointer" src={accIcon} />
                 </Message>
                 <Message name={"neronero"} message={"test1"}>
-                  <img className="cursor-pointer" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  <img
+                    className="cursor-pointer"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
                 </Message>
                 <Message name={"rayray"} message={"test2"}>
                   <img className="cursor-pointer" src={accIcon} />
@@ -467,23 +519,91 @@ function App() {
             {/*Bottom Sticky*/}
             <div className="bg-primary p-3  gap-3 w-full flex sticky bottom-0 justify-center">
               <div className="flex items-center gap-2 bg-accent p-2 rounded-md w-full">
-                <svg
-                  class="h- w-9 cursor-pointer"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  {" "}
-                  <path stroke="none" d="M0 0h24v24H0z" />{" "}
-                  <circle cx="12" cy="12" r="9" />{" "}
-                  <line x1="9" y1="12" x2="15" y2="12" />{" "}
-                  <line x1="12" y1="9" x2="12" y2="15" />
-                </svg>
+                <div className="dropdown dropdown-top">
+                  <svg
+                    tabIndex={0}
+                    class="h-6 w-6 cursor-pointer"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    {" "}
+                    <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                    <circle cx="12" cy="12" r="9" />{" "}
+                    <line x1="9" y1="12" x2="15" y2="12" />{" "}
+                    <line x1="12" y1="9" x2="12" y2="15" />
+                  </svg>
+                  <ul
+                    tabIndex={0}
+                    className="font-extrabold dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow 
+                    [&_li>*]:rounded-sm
+                    [&_li>*]:px-1"
+                  >
+                    <li>
+                      <a>
+                        <svg
+                          class="h-6 w-6 "
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                          />
+                        </svg>
+                        Upload a File
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <svg
+                          class="h-6 w-6 cursor-pointer"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          {" "}
+                          <circle cx="12" cy="12" r="10" />{" "}
+                          <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+                        </svg>{" "}
+                        Create Thread
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <svg
+                          class="h-6 w-6"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          {" "}
+                          <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                          <line x1="4" y1="6" x2="20" y2="6" />{" "}
+                          <line x1="4" y1="12" x2="14" y2="12" />{" "}
+                          <line x1="4" y1="18" x2="18" y2="18" />
+                        </svg>
+                        Create a Poll
+                      </a>
+                    </li>
+                  </ul>
+                </div>
                 <input
                   placeholder="Message"
                   className="bg-transparent focus:outline-none border-none rounded-md w-full"
@@ -571,7 +691,7 @@ function App() {
             </div>
           </div>
           {/*Active Now (if main page) or Active Members (if in server)*/}
-          <div className="w-72 h-full bg-neutral overflow-y-auto">
+          <div className="w-72 h-full bg-neutral overflow-y-auto scrollbar-thin scrollbar-webkit">
             <div className="navbar h-12 min-h-0 px-4 bg-base-100 drop-shadow-2xl">
               {/*Online Div*/}
               <div className="flex-1 flex font-bold text-xs">ONLINE — 8</div>
