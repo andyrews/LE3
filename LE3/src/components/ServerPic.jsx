@@ -1,6 +1,7 @@
 import { useState } from "react";
+import useDiscordStore from "../DiscordStore.js";
 
-const ServerPic = ({ message, isServer=true, color, children }) => {
+export const ServerPic = ({ message, isServer=true, color, children }) => {
   const [picData, setPicData] = useState(message || "");
   const [server, setServer] = useState(isServer);
   const hoverColor = color || "bg-secondary";
@@ -18,6 +19,17 @@ const ServerPic = ({ message, isServer=true, color, children }) => {
         </button>
       </div>
     </>
+  );
+};
+
+export const ServerList = () => {
+  const servers = useDiscordStore((state) => state.servers);
+  return (
+    <div className="flex flex-col gap-2">
+      {
+        // servers.map()
+      }
+    </div>
   );
 };
 

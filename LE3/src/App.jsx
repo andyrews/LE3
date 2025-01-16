@@ -1,5 +1,6 @@
 import { useState } from "react";
-import ServerPic from "./components/ServerPic";
+import useDiscordStore from "./DiscordStore.js";
+import {ServerPic, ServerList} from "./components/ServerPic";
 import "./App.css";
 import accIcon from "./assets/img/acc-icon.png";
 import { ChannelDropdown, ChannelList, Channel } from "./components/Channel";
@@ -34,20 +35,8 @@ function App() {
               <ServerPic message={"gg"} />
               <ServerPic message={"gg"} />
               <ServerPic message={"r"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"r"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"r"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"r"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"r"} />
-              <ServerPic message={"gg"} />
-              <ServerPic message={"gg"} />
+              <ServerList />
+
               <ServerPic color={"hover:bg-green-600"} isServer={false}>
                 <svg
                   class="h-4 w-4 text-green-500 hover:text-white"
