@@ -4,7 +4,7 @@ const Message = ({ name, message, children }) => {
   return (
     <>
       {/*Message Body*/}
-      <div className="flex my-3 gap-2 items-start justify-start">
+      <div className="flex my-3 gap-2 items-start justify-start hover:bg-[#c4813f] cursor-pointer">
         {/*Profile Pic*/}
         <div className="avatar">
           <div className="w-10 rounded-full">{children}</div>
