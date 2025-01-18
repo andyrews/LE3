@@ -13,6 +13,8 @@ export default {
       black5: '#232428',
       black6: '#383a40',
       black7: '#111214',
+      black8: '#35373c',
+      gray1: '#565a62',
       blue1:'#5865f2',
       blue2: '#4752c3',
       bluelink: '#00aafc',

@@ -3,6 +3,7 @@ import './App.css';
 import { useParams, Outlet, Link } from 'react-router';
 import useGlobal from './core/discordStore.js';
 import arrow from './assets/arrow.svg';
+import Me from './components/Me.jsx';
 
 function ChannelLayout() {
   const { serverId } = useParams();
@@ -26,7 +27,7 @@ function ChannelLayout() {
     return <div>Server not found</div>;
   }
   if (serverId === '@me') {
-    return <div>Find or start a conversation</div>;
+    return <Me currUser={currUser}></Me>;
   }
 
   return (
