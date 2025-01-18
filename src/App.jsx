@@ -25,7 +25,7 @@ function App() {
         <div className='mr-7 bg-white1 rounded-full px-4 py-2'>
           <Link to="/login" className='text-sm text-blue2 font-bold'>Login</Link></div>
       </div>
-      <img className='fixed top-0' style={{zIndex: '-1'}} src={homeBG}/>
+      <img className='fixed top-0 w-full' style={{zIndex: '-1'}} src={homeBG}/>
     </div>
     </>
   )

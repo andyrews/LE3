@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Message = ({ message, sender }) => {
     if (!sender) {
         console.error("Sender data is missing!");

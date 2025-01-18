@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useNavigate } from "react-router";
-import './App.css'
-import useUser from './core/discordStore';
+import useUser from '../core/discordStore';
 
 function Register() {
   const registerUser = useUser((state) => state.registerUser);

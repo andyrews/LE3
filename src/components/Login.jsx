@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import useUser from './core/discordStore.js'
+import useUser from '../core/discordStore.js'
 import { useNavigate, Link } from "react-router";
-import './App.css'
-
 function Login() {
   const [user, setUser] = useState('')
   const [pass, setPass] = useState('')

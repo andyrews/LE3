@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import {BrowserRouter, Routes, Route} from "react-router";
 import './index.css'
 import App from './App.jsx'
-import AuthLayout from './AuthLayout.jsx';
-import Login from './Login.jsx'
-import Register from './Register.jsx'
+import AuthLayout from './AuthLayout.jsx'
+import Login from './components/Login.jsx'
+import Register from './components/Register.jsx'
 import ServerLayout from './ServerLayout.jsx'
 import ChannelLayout from './ChannelLayout.jsx'
 import Channel from './Channel.jsx'

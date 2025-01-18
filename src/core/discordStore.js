@@ -218,6 +218,7 @@ const useGlobal = create(
         };
         console.log("made New message:", newMessage);
         set((state) => ({ messages: [...state.messages, newMessage] }));
+        return newMessage;
       },
       getMessages: (serverID, channelID) => {
         const { messages } = get();
