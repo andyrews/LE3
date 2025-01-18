@@ -80,7 +80,7 @@ function ChannelLayout() {
               </div>
             </div>
             <div className="flex flex-col text-left gap-0.5">
-              <div>Idol</div>
+              <div>{currUser && currUser.username ? currUser.username : 'loading...'}</div>
               <div>hello</div>
             </div>
           </div>
