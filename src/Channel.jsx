@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router";
 import useGlobal from "./core/discordStore.js";
 import Message from "./components/Message.jsx";
 import Active from "./components/Active.jsx";
+import Toast from "./components/Toast.jsx";
 
 function Channel() {
     
@@ -21,6 +22,8 @@ function Channel() {
     const getMembers = useGlobal((state) => state.getMembers);
     const sendMessage = useGlobal((state) => state.sendMessage);
     const [newMessage, setNewMessage] = useState('');
+
+    
 
     useEffect(() => {
         const pathParts = location.pathname.split('/');
@@ -46,6 +49,8 @@ function Channel() {
     useEffect(() => {
         console.log("Updated channel details:", channelDetails);
     }, [channelDetails]);
+
+    
 
     const handleSendMessage = async () => {
         if (!newMessage.trim()) return;
@@ -308,6 +313,7 @@ function Channel() {
             {/*Active Now (if main page) or Active Members (if in server)*/}
             <Active members={members}></Active>
         </div>
+        <Toast />
     </>);
 }
 export default Channel;
