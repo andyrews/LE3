@@ -121,11 +121,11 @@ function Channel({ currUser }) {
                         <p className=' text-white1 pr-2'>Friends</p>
                         <div className="h-8 w-0.5 bg-black8"></div>
                     </div>
-                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6'>Online</p>
-                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6'>All</p>
-                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6'>Pending</p>
-                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6'>Blocked</p>
-                    <p className='text-green1 text-nowrap font-bold'>Add Friend</p>
+                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6 max-md:hidden'>Online</p>
+                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6 max-md:hidden'>All</p>
+                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6 max-md:hidden'>Pending</p>
+                    <p className='px-2 rounded-md text-white2 hover:text-white1 hover:bg-black6 max-md:hidden'>Blocked</p>
+                    <p className='text-green1 text-nowrap font-bold max-md:hidden'>Add Friend</p>
                 </div>
                 <div className="navbar-end items-center space-x-4">
                 <svg x="0" y="0" className="icon_fc4f04" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path d="M19 14a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z" fill="currentColor" className=""></path><path d="M20.76 12.57c.4.3 1.23.13 1.24-.37V12a10 10 0 1 0-18.44 5.36c.12.19.1.44-.04.61l-2.07 2.37A1 1 0 0 0 2.2 22h10c.5-.01.67-.84.37-1.24A3 3 0 0 1 15 16h.5a.5.5 0 0 0 .5-.5V15a3 3 0 0 1 4.76-2.43Z" fill="currentColor" className=""></path></svg>
@@ -150,7 +150,7 @@ function Channel({ currUser }) {
                     </div>
                     <div className='space-y-4 my-4 mx-7'>
                         <p className='text-white1 font-bold'>OTHER PLACES TO MAKE FRIENDS</p>
-                        <button className='flex px-2 py-1 w-full max-w-sm items-center font-xs bg-black2 outline outline-1 outline-black6 shadow-sm rounded-md'>
+                        <button className='flex px-2 py-1 w-full max-w-sm items-center font-xs bg-black2 outline outline-1 outline-black6 shadow-sm rounded-md hover:bg-black6'>
                         <div className='bg-green1 p-2 mx-2 my-1 rounded-lg'>
                             <img className='filter invert' src={discover}/>
                         </div>
