@@ -23,9 +23,3 @@
     src: url("./assets/fonts/gg-sans-Semibold.ttf");
     font-weight: 700;
 }
-
-.tooltip-right::before{
-    /* @apply left-auto; */
-    /* @apply right-auto;
-    @apply fixed; */
-}
