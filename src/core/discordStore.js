@@ -231,75 +231,12 @@ const useGlobal = create(
       },
       
       resetStore: () => {
+        const { users, servers, messages } = get();
         set({
-          users: [
-            { id: 1, username: "1test", email: "testing@example.com", password: "123", displayName: "Test User", online: false, activity:null, avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Eliza" },
-            { id: 2, username: "2test", email: "testing2@example.com", password: "123", displayName: "Test User 2", online: false, activity:null, avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Jocelyn"},
-            { id: 3, username: "3test", email: "testing3@example.com", password: "123", displayName: "Test User 3", online: true, activity:"Listening to Spotify", avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Ryan"},
-            { id: 4, username: "4test", email: "testing4@example.com", password: "123", displayName: "Test User 4", online: true, activity:"Playing Roblox", avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Aiden"},
-            { id: 5, username: "5test", email: "testing5@example.com", password: "123", displayName: "Test User 5", online: true, activity:"wag nyo ko kausapin", avatar: "https://api.dicebear.com/9.x/bottts-neutral/svg?seed=Emery"}
-          ],
+          users: [...users],
           currentUser: null,
-          servers: [
-            {
-              id: 1,
-              name: "Server Alpha",
-              categories: {
-                chats: [
-                  { id: 1, name: "general", type: "text" },
-                  { id: 2, name: "random", type: "text" }
-                ],
-                voicerooms: [
-                  { id: 3, name: "general", type: "voice" }
-                ]
-              },
-              members: [1, 2, 4],
-              lastActiveChannel: 1
-            },
-            {
-              id: 2,
-              name: "Server Beta",
-              categories: {
-                yap: [
-                  { id: 1, name: "general", type: "text" }
-                ],
-                yapper: [
-                  { id: 2, name: "random", type: "text" }
-                ],
-                yappest: [
-                  { id: 3, name: "general", type: "voice" }
-                ]
-              },
-              members: [1, 3, 5],
-              lastActiveChannel: 1
-            },
-            {
-              id: 3,
-              name: "Server Gamma",
-              categories: {
-                general: [
-                  { id: 1, name: "general", type: "text" },
-                  { id: 3, name: "general", type: "voice" }
-                ],
-                random: [
-                  { id: 2, name: "random", type: "text" }
-                ]
-              },
-              members: [2, 3, 1],
-              lastActiveChannel: 1
-            }
-          ],
-          messages:[
-            {"id": 1, "senderID": 2, "serverID": 1, "channelID": 1, "content": "Hey everyone! Anyone up for a gaming session tonight?", "timestamp": "2025-01-17T15:30:00Z"},
-            {"id": 2, "senderID": 4, "serverID": 1, "channelID": 1, "content": "I can't make it, but let me know how it goes!", "timestamp": "2025-01-17T15:32:00Z"},
-            {"id": 3, "senderID": 1, "serverID": 1, "channelID": 2, "content": "Random thought: pineapple on pizza is amazing.", "timestamp": "2025-01-17T15:35:00Z"},
-            {"id": 4, "senderID": 3, "serverID": 2, "channelID": 1, "content": "Morning! Don't forget to submit your project drafts by 5 PM.", "timestamp": "2025-01-17T08:00:00Z"},
-            {"id": 5, "senderID": 5, "serverID": 2, "channelID": 2, "content": "Did you see the new movie trailer? Looks epic!", "timestamp": "2025-01-17T14:20:00Z"},
-            {"id": 6, "senderID": 1, "serverID": 2, "channelID": 2, "content": "Yeah, I can't wait for it to come out next month.", "timestamp": "2025-01-17T14:22:00Z"},
-            {"id": 7, "senderID": 2, "serverID": 3, "channelID": 1, "content": "Server Gamma is so quiet lately. What's everyone up to?", "timestamp": "2025-01-17T12:45:00Z"},
-            {"id": 8, "senderID": 3, "serverID": 3, "channelID": 2, "content": "Just working on some code. What's new with you?", "timestamp": "2025-01-17T13:00:00Z"},
-            {"id": 9, "senderID": 1, "serverID": 3, "channelID": 1, "content": "Thinking about organizing a trivia night. Any takers?", "timestamp": "2025-01-17T13:10:00Z"}
-          ]
+          servers: [...servers],
+          messages:[...messages]
         });
       }
     }),
