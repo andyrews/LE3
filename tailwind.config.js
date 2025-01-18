@@ -11,6 +11,8 @@ export default {
       black3:'#2e3035',
       black4: '#313338',
       black5: '#232428',
+      black6: '#383a40',
+      black7: '#111214',
       blue1:'#5865f2',
       blue2: '#4752c3',
       bluelink: '#00aafc',
@@ -18,6 +20,7 @@ export default {
       white2: '#b5bac1',
       white3: '#949ba4',
       white4: '#ffffff',
+      white5: '#dbdee1',
       red1: '#f8767a',
       green1: '#23a55a'
     },fontFamily: {

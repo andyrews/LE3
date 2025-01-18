@@ -116,11 +116,11 @@ const useGlobal = create(
           servers: servers.map((server) =>
             server.id === serverId
               ? {
-                  ...server,
-                  members: server.members.includes(user.id)
-                    ? server.members
-                    : [...server.members, user.id]
-                }
+                ...server,
+                members: server.members.includes(user.id)
+                  ? server.members
+                  : [...server.members, user.id]
+              }
               : server
           )
         });
@@ -135,32 +135,50 @@ const useGlobal = create(
           return { servers: updatedServers };
         });
       },
+      getServerDetails: (serverId) => {
+        const { servers } = get();
+        const server = servers.find((server) => Number(server.id) === Number(serverId));
+        
+        if (!server) {
+          console.error(`Server with ID ${serverId} not found.`);
+          console.log("Available servers:", servers); // Log the current servers state for debugging
+          return null;
+        }
+        
+        console.log("Server found:", server.name);
+        return server;
+      },
+      
       getChannelDetails: (serverId, channelId) => {
         const { servers } = get();
-        const server = servers.find((server) => server.id === serverId);
+        console.log("Searching for server with ID:", serverId); // Log the serverId
+        const server = servers.find((server) => Number(server.id) === Number(serverId));
       
         if (!server) {
           console.error(`Server with ID ${serverId} not found.`);
+          console.log("Available servers:", servers); // Log the current servers state for debugging
           return null;
         }
       
         console.log("Server found:", server.name);
       
-        let channel = null;
-        Object.keys(server.categories).forEach((categoryKey) => {
-          console.log(`Searching in category: ${categoryKey}`);
-          const category = server.categories[categoryKey];
-          const channel = category.find((ch) => Number(ch.id) === Number(channelId));
-          if (channel) return; // Stop the loop once the channel is found
-        });
+        // Flatten all channels from all categories into a single array
+        const allChannels = Object.values(server.categories).flat();
+      
+        console.log("Flattened channels list:", allChannels); // Debug flattened list
+      
+        // Find the channel by comparing channelId with the id property of each channel object
+        const channel = allChannels.find((channel) => Number(channel.id) === Number(channelId));
       
         if (!channel) {
           console.error(`Channel with ID ${channelId} not found in server ${serverId}.`);
+          return null;
         }
       
-        return channel || null;
+        return channel;
       },
-          
+      
+
       resetStore: () => {
         set({
           users: [
@@ -224,7 +242,7 @@ const useGlobal = create(
       }
     }),
     {
-      name: "app-storage", 
+      name: "app-storage",
       storage: createJSONStorage(() => indexedDBStorage),
       onRehydrateStorage: () => {
         console.log("State rehydrated");

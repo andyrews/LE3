@@ -45,12 +45,7 @@ function ChannelLayout() {
                   <ul className="ms-0 ps-0">
                     {channels.map((channel) => (
                       <li key={channel.id}>
-                        <Link to={`/channels/${currentServer.id}/${channel.id}`} onClick={() => {
-                          const { onEnterChannel } = useGlobal.getState();
-                          if (onEnterChannel) {
-                            onEnterChannel(currentServer.id, channel.id);
-                          }
-                        }}>
+                        <Link to={`/channels/${currentServer.id}/${channel.id}`}>
                           {channel.type === "text" && (
                             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                               <line x1="4" y1="9" x2="20" y2="9" />
