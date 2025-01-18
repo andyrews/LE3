@@ -75,13 +75,19 @@ function ChannelLayout() {
               <span className="right-1 bottom-1 indicator-item indicator-end indicator-bottom badge badge-xs bg-green1"></span>
               <div className="w-8 h-8 rounded-full">
                 <div className="bg-blue1 text-white rounded-full w-full h-full flex items-center justify-center">
-                  {currUser && currUser.username ? currUser.username[0].toUpperCase() : 'U'}
+                  {currUser && currUser.avatar ? (
+                      <img src={currUser.avatar} alt="Profile" />
+                    ) : (
+                      <span className="text-white">
+                        {currUser && currUser.username ? currUser.username.charAt(0).toUpperCase() : 'U'}
+                      </span>
+                    )}
                 </div>
               </div>
             </div>
             <div className="flex flex-col text-left gap-0.5">
-              <div>{currUser && currUser.username ? currUser.username : 'loading...'}</div>
-              <div>hello</div>
+              <div>{currUser && currUser.displayName ? currUser.displayName : currUser.username}</div>
+              <div>{currUser && currUser.displayName ? "Online": currUser.username}</div>
             </div>
           </div>
           <div className="flex flex-row items-center gap-0.5 [&_button]:btn [&_button]:btn-ghost [&_button]:px-1.5 [&_button]:w-8 [&_button]:h-8 [&_button]:min-h-0">

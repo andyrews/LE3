@@ -21,6 +21,8 @@ export default {
       white3: '#949ba4',
       white4: '#ffffff',
       white5: '#dbdee1',
+      white6: '#848a92',
+      white6: '#c8cbce',
       red1: '#f8767a',
       green1: '#23a55a'
     },fontFamily: {
